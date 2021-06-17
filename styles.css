@@ -1,3 +1,7 @@
+.body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,7 +69,7 @@
   width: 250px;
   height: 70px;
   color: white;
-  background-color: #9356dc;
+  background-color: #c55fa8;
   border-radius: 30px;
   border: #9356dc;
   font-size: large;
@@ -155,6 +159,8 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
+  -webkit-box-shadow: 5px 5px 5px #9b9898;
+          box-shadow: 5px 5px 5px #9b9898;
 }
 
 .first .fa-heart {
@@ -168,14 +174,14 @@
 
 .first img {
   width: 100%;
-  height: 230px;
+  height: 200px;
   border-radius: 20px 20px 00px 00px;
 }
 
 .Restaurants {
   margin-top: 80px;
   width: 100%;
-  height: 1600px;
+  height: 1500px;
   background-color: #d4d4d4;
 }
 
@@ -183,5 +189,42 @@
   background-color: #292626;
   width: 100%;
   height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer img {
+  width: 150px;
+}
+
+.footer p {
+  color: white;
+}
+
+.footer i {
+  color: white;
+}
+
+.footer .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .log {
+  font-family: 'Shrikhand', cursive;
+  font-size: 25px;
 }
 /*# sourceMappingURL=styles.css.map */
