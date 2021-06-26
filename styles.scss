@@ -1,10 +1,12 @@
 .body{
+    p{
     font-family: 'Roboto', sans-serif;
+}
 }
 $purple:#9356dc ;
 $pink:#ff79da;
 $mint:#99e2d0;
-$grey:#d4d4d4;
+$grey:#f1f1f1;
 
 @mixin Restauran {
     border-radius: 20px 20px;
@@ -17,26 +19,46 @@ $grey:#d4d4d4;
     align-items: center;
     display: block;
     margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: transform 450ms;
+            &:hover {
+            transform: scale(1.13);
+            }
     .fa-heart{
         display: flex;
         position: relative;
         left: 90%;
-        bottom: 50px;
+        bottom: 40px;
+        transition: transform 800ms;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.5);
+            
+            color: $mint;
+            
+            
+            }
     }
-    
     img{
         width: 100%;
         height: 200px;
         border-radius: 20px 20px 00px 00px;   
     }
     margin-bottom: 30px;
+    line-height: 5px;
     box-shadow: 5px 5px 5px rgb(155, 152, 152);
+    .imgtext{
+        margin-left: 20px;
+    }
 }
     
 @mixin  section {
     width: 95%;
     height: 70px;
-    background-color:$grey;
+    background-color:#f1f1f1
+    ;
     border-radius: 20px;
     position: relative;
     left: 10px;
@@ -76,7 +98,47 @@ $grey:#d4d4d4;
     }
     box-shadow: 5px 5px 5px rgb(172, 170, 170);
     margin-bottom: 20px;   
+    transition: transform 1200ms;
+            &:hover {
+            transform: scale(1.1);
+            background-color: #c28db3
+            
+        }
 }
+
+@mixin Footer {   
+    background-color:rgb(41, 38, 38);
+    width: 100%;
+    height: 200px;
+    line-height: 2px;
+  p{
+      margin-left: 20px; 
+      color: white;
+       
+  }
+  i{
+    margin-left: 20px;
+      color:white 
+      
+      
+  }
+  display: flex;
+  flex-direction: column;
+  .sub{
+    display:flex;
+	justify-content: flex-start;
+    align-items: center;
+    
+      
+      
+      
+  }
+  .log{
+    font-family: 'Shrikhand', cursive;
+    font-size: 25px;
+  } 
+}
+
 
 
 
@@ -90,7 +152,8 @@ $grey:#d4d4d4;
 }
 
 .header1 {
-    border-top: gray 2px solid;
+    border-top: 4px inherit;
+    border-color: rgb(29, 28, 27);
     background-color: $grey;
     width: 100%;
     height: 3rem;
@@ -105,7 +168,7 @@ $grey:#d4d4d4;
         position: relative;
         top: 15px;
     }
-    box-shadow: 5px 5px 5px rgb(204, 200, 200);
+    
 }
 
 .header2 {
@@ -115,17 +178,29 @@ $grey:#d4d4d4;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     flex-direction: column;
     .button {
         width: 250px;
         height: 70px;
         color: white;
-        background-color:#c55fa8;
+        background-image: linear-gradient(#ff79da, #9356dc);
+
         border-radius: 30px;
         border: $purple;
-        font-size: large;
-        box-shadow: 5px 5px 5px 2px rgb(99, 97, 97);
+        font-size: 15px;
+        box-shadow: inset 0 6px 5px -3px rgb(0 0 0 / 30%);
+        cursor: pointer;
+    overflow: hidden;
+    padding: 1.85rem 3rem;
+    position: relative;
+    transition: transform 450ms;
+            &:hover {
+            transform: scale(1.13);
+            background-color: #c02e97
+            
+        }
         
     }
 }
@@ -149,29 +224,5 @@ $grey:#d4d4d4;
 }
 
 .footer{
-    background-color:rgb(41, 38, 38);
-    width: 100%;
-    height: 500px;
-    img{
-        width: 150px;  
-    }
-  p{
-      color: white;
-  }
-  i{
-      color:white
-  }
-  display: flex;
-  flex-direction: column;
-  .sub{
-      display:flex;
-      justify-content:flex-start;
-      flex-direction: column;
-      
-      
-  }
-  .log{
-    font-family: 'Shrikhand', cursive;
-    font-size: 25px;
-  }
+    @include Footer;
 }

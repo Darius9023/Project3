@@ -1,0 +1,157 @@
+$purple:#9356dc ;
+$pink:#ff79da;
+$mint:#99e2d0;
+$grey:#f1f1f1;
+
+
+@mixin tab {
+    background-color:#ffffff;
+        width: 100%;
+        height: 80px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        line-height:0.01px; 
+        margin-bottom: 20px;
+        
+
+        .price{
+            font-weight: 800;
+            font-size: 20px;
+            display: flex;
+            align-self: flex-end;
+            position: relative;
+            bottom: 50px;
+            left: -30px;   
+        }
+        h4{
+            position: relative;
+            left: 20px;
+            font-size: 20px; 
+        }
+        p{
+            position: relative;
+            left: 20px;
+            bottom: 10px; 
+        }
+        
+    }
+    
+body{
+    background-color: $grey;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.header1 {
+    border-top: 4px inherit;
+    border-color: rgb(29, 28, 27);
+    background-color:grey;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fa-map-marker-alt {
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 15px;
+    }
+    
+}
+    
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    height: 30px;
+    margin-bottom: 15px;
+    .fas{
+        position:absolute;
+        left: 40px;    
+    } 
+}
+
+.top{
+    img{
+        width: 100%;
+    }
+    margin-top: 30px;
+}
+
+.menu{
+    background-color: #f1f1f1 ;
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    margin-top: -70px;
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    justify-content: center;
+    i{
+        margin-top: 15px;
+        margin-left: 80px;
+    }
+    h4{
+        font-size: 20px;
+    }   
+    }
+
+    .topic{
+        border-bottom: 2px solid green;
+        width: 150px;
+        font-size: 30px;
+    }
+
+.section{
+        @include tab
+    }
+
+    .button {
+        background-color:$grey;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        margin:auto ;
+        margin-bottom: 50px;
+        margin-top: 50px;
+            width: 220px;
+            height: 60px;
+            color: white;
+            background-image: linear-gradient(#ff79da, #9356dc);
+    
+            border-radius: 30px;
+            border: $purple;
+            font-size: 20px;
+            box-shadow: inset 0 6px 5px -3px ;
+            cursor: pointer;
+        overflow: hidden;
+        padding: 1.85rem 3rem;
+        position: relative;
+        transition: transform 450ms;
+                &:hover {
+                transform: scale(1.13);
+                background-color: #c96aae
+                
+            }
+            
+        }
+    
+
+   
+
+   
