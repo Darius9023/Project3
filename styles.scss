@@ -34,9 +34,15 @@ $grey:#f1f1f1;
         transition: transform 800ms;
         cursor: pointer;
         &:hover {
-            transform: scale(1.5);
+            transform: scale(1.2);
             
-            color: $mint;
+            color: $purple;
+            :hover::after{
+                background-color:$purple;
+                background-image: linear-gradient(#ff79da, #9356dc);
+               
+                
+            }
             
             
             }
@@ -80,6 +86,10 @@ $grey:#f1f1f1;
     .fa-store{
         position: relative;
         right: 20px;
+       
+    
+       
+    
         
     }
     .circle{
@@ -101,8 +111,9 @@ $grey:#f1f1f1;
     transition: transform 1200ms;
             &:hover {
             transform: scale(1.1);
-            background-color: #c28db3 
+            background-color: #ce5eae       
         }
+        
        
         
         
@@ -189,7 +200,6 @@ $grey:#f1f1f1;
         height: 70px;
         color: white;
         background-image: linear-gradient(#ff79da, #9356dc);
-
         border-radius: 30px;
         border: $purple;
         font-size: 15px;
@@ -204,6 +214,9 @@ $grey:#f1f1f1;
             background-color: #c02e97
             
         }
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
     }
 }
@@ -214,6 +227,21 @@ $grey:#f1f1f1;
 
 .first{
     @include Restauran
+}
+
+.new{
+    width: 55px;
+    height: 25px;
+    background-color: aquamarine;
+    position: absolute;
+    left: 300px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    font-size: large;
+    
 }
 
 .Restaurants{

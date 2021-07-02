@@ -34,18 +34,46 @@ $grey:#f1f1f1;
             left: 20px;
             bottom: 10px; 
         }
-        @keyframes section{
+        animation: pop-out 3s  ease forwards,
+                   vission 3s  ease forwards ;
+                   opacity: 1;
+                   
+        
+        @keyframes pop-out {
             0% {
-                transform: scaleX(0);
+                transform: translateY(-200px);
             }
 
             50%{
-                transform: scaleX(0.5);
+                transform:translateY(5px);
             }
             100% {
-                transform: scaleX(1);
+                transform:translateY(10px);
             }
         }
+
+        @keyframes vission {
+            0% {
+                opacity: 0.1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+               opacity: 1;
+            }
+            
+        }
+
+        @keyframes tabhover{
+           from{transform: translateX(20px);}
+            to{transform:translateX(60px) ;}
+        }
+
+        :hover{
+           animation: tabhover 2s ease;
+        }
+
         
     }
     
@@ -162,6 +190,8 @@ body{
             }
             
         }
+
+        
     
 
    

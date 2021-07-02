@@ -84,6 +84,15 @@
   transition: -webkit-transform 450ms;
   transition: transform 450ms;
   transition: transform 450ms, -webkit-transform 450ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header2 .button:hover {
@@ -162,7 +171,7 @@
 .works:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: #c28db3;
+  background-color: #ce5eae;
 }
 
 .first {
@@ -216,9 +225,15 @@
 }
 
 .first .fa-heart:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  color: #99e2d0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #9356dc;
+}
+
+.first .fa-heart:hover :hover::after {
+  background-color: #9356dc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
 }
 
 .first img {
@@ -229,6 +244,26 @@
 
 .first .imgtext {
   margin-left: 20px;
+}
+
+.new {
+  width: 55px;
+  height: 25px;
+  background-color: aquamarine;
+  position: absolute;
+  left: 300px;
+  top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: green;
+  font-size: large;
 }
 
 .Restaurants {
