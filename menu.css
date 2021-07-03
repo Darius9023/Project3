@@ -113,8 +113,8 @@ body {
           flex-direction: column;
   line-height: 0.01px;
   margin-bottom: 20px;
-  -webkit-animation: pop-out 3s  ease forwards, vission 3s  ease forwards;
-          animation: pop-out 3s  ease forwards, vission 3s  ease forwards;
+  -webkit-animation: pop-out 3s linear forwards;
+          animation: pop-out 3s linear forwards;
   opacity: 1;
 }
 
@@ -145,83 +145,65 @@ body {
 
 @-webkit-keyframes pop-out {
   0% {
-    -webkit-transform: translateY(-200px);
-            transform: translateY(-200px);
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0;
   }
   50% {
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
+    opacity: 0.5;
   }
   100% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+    opacity: 1;
   }
 }
 
 @keyframes pop-out {
   0% {
-    -webkit-transform: translateY(-200px);
-            transform: translateY(-200px);
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0;
   }
   50% {
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
+    opacity: 0.5;
   }
   100% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
-  }
-}
-
-@-webkit-keyframes vission {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes vission {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes tabhover {
   from {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    left: 0px;
+    background-color: #a87a7a;
   }
   to {
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    left: 80px;
+    background-color: #a87a7a;
   }
 }
 
 @keyframes tabhover {
   from {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    left: 0px;
+    background-color: #a87a7a;
   }
   to {
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    left: 80px;
+    background-color: #a87a7a;
   }
 }
 
 .section :hover {
-  -webkit-animation: tabhover 2s ease;
-          animation: tabhover 2s ease;
+  -webkit-animation: tabhover 2s ease forwards;
+          animation: tabhover 2s ease forwards;
 }
 
 .button {

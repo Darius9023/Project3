@@ -35,7 +35,7 @@ $grey:#f1f1f1;
         cursor: pointer;
         &:hover {
             transform: scale(1.2);
-            
+            background-image: $purple;
             color: $purple;
             :hover::after{
                 background-color:$purple;
@@ -153,7 +153,9 @@ $grey:#f1f1f1;
 }
 
 
-
+h2{
+    padding: 20px;
+}
 
 
 .header {
@@ -165,8 +167,7 @@ $grey:#f1f1f1;
 }
 
 .header1 {
-    border-top: 4px inherit;
-    border-color: rgb(29, 28, 27);
+    border-top: 3px outset  rgb(184, 181, 181);
     background-color: $grey;
     width: 100%;
     height: 3rem;
@@ -180,6 +181,7 @@ $grey:#f1f1f1;
         height: 50px;
         position: relative;
         top: 15px;
+
     }
     
     

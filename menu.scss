@@ -34,44 +34,40 @@ $grey:#f1f1f1;
             left: 20px;
             bottom: 10px; 
         }
-        animation: pop-out 3s  ease forwards,
-                   vission 3s  ease forwards ;
+        animation: pop-out 3s  linear forwards, ;
                    opacity: 1;
+                  
+        
                    
         
         @keyframes pop-out {
             0% {
-                transform: translateY(-200px);
+                transform: translateY(-400px);
+                opacity: 0;
             }
 
             50%{
                 transform:translateY(5px);
-            }
-            100% {
-                transform:translateY(10px);
-            }
-        }
-
-        @keyframes vission {
-            0% {
-                opacity: 0.1;
-            }
-            50% {
                 opacity: 0.5;
             }
             100% {
-               opacity: 1;
-            }
-            
+                transform:translateY(10px);
+                opacity: 1;
+            }   
         }
 
         @keyframes tabhover{
-           from{transform: translateX(20px);}
-            to{transform:translateX(60px) ;}
+          
+           from{left: 0px; background-color: rgb(168, 122, 122); }
+            to{left: 80px; background-color: rgb(168, 122, 122);}
+            
+            
         }
 
-        :hover{
-           animation: tabhover 2s ease;
+        :hover{ 
+           animation: tabhover 2s ease forwards;
+           
+                  
         }
 
         
@@ -157,6 +153,8 @@ body{
 
 .section{
         @include tab
+
+        
     }
 
     .button {
