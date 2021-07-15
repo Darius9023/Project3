@@ -34,12 +34,16 @@ $grey:#f1f1f1;
         transition: transform 800ms;
         cursor: pointer;
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.3);
             background-image: $purple;
             color: $purple;
             :hover::after{
+                color: $purple;
                 background-color:$purple;
-                background-image: linear-gradient(#ff79da, #9356dc);
+                
+                
+                
+                
                
                 
             }
@@ -76,7 +80,6 @@ $grey:#f1f1f1;
     .fa-mobile-alt{
         position: relative;
         right: 20px;
-        
     }
     .fa-list-ul{
         position: relative;
@@ -111,7 +114,13 @@ $grey:#f1f1f1;
     transition: transform 1200ms;
             &:hover {
             transform: scale(1.1);
-            background-color: #ce5eae       
+            color: $purple;
+            h4{
+                color: black;
+            }
+            background-color:#e2d1f8
+            
+               
         }
         
        
@@ -151,6 +160,7 @@ $grey:#f1f1f1;
     font-size: 25px;
   } 
 }
+
 
 
 h2{
@@ -215,6 +225,7 @@ h2{
             transform: scale(1.13);
             background-color: #c02e97
             
+            
         }
         display: flex;
         justify-content: center;
@@ -225,6 +236,7 @@ h2{
 
 .works{
     @include section;
+    
 }
 
 .first{

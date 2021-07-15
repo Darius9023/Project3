@@ -182,22 +182,22 @@ body {
 @-webkit-keyframes tabhover {
   from {
     left: 0px;
-    background-color: #a87a7a;
+    background-origin: #8cc24f;
   }
   to {
     left: 80px;
-    background-color: #a87a7a;
+    background-color: #66b442;
   }
 }
 
 @keyframes tabhover {
   from {
     left: 0px;
-    background-color: #a87a7a;
+    background-origin: #8cc24f;
   }
   to {
     left: 80px;
-    background-color: #a87a7a;
+    background-color: #66b442;
   }
 }
 

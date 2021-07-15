@@ -42,7 +42,7 @@ $grey:#f1f1f1;
         
         @keyframes pop-out {
             0% {
-                transform: translateY(-400px);
+                transform: translateY(-400px );
                 opacity: 0;
             }
 
@@ -58,8 +58,8 @@ $grey:#f1f1f1;
 
         @keyframes tabhover{
           
-           from{left: 0px; background-color: rgb(168, 122, 122); }
-            to{left: 80px; background-color: rgb(168, 122, 122);}
+           from{left: 0px; background-origin: rgb(140, 194, 79); }
+            to{left: 80px; background-color: rgb(102, 180, 66);}
             
             
         }

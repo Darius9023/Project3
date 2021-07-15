@@ -174,7 +174,12 @@ h2 {
 .works:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: #ce5eae;
+  color: #9356dc;
+  background-color: #e2d1f8;
+}
+
+.works:hover h4 {
+  color: black;
 }
 
 .first {
@@ -228,16 +233,15 @@ h2 {
 }
 
 .first .fa-heart:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   background-image: #9356dc;
   color: #9356dc;
 }
 
 .first .fa-heart:hover :hover::after {
+  color: #9356dc;
   background-color: #9356dc;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(#ff79da, #9356dc);
 }
 
 .first img {
