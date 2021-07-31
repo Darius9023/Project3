@@ -5,27 +5,34 @@ $grey:#f1f1f1;
 
 
 @mixin tab {
-    background-color:#ffffff;
-        width: 100%;
+    background-color:#ffff;
+        width: 425px;
         height: 80px;
         border-radius: 25px;
         display: flex;
         flex-direction: column;
         line-height:0.01px; 
         margin-bottom: 20px;
+        :hover{
+            
+            animation: slide 2s linear forwards ;    
+        }
+        
         .price{
+            
             font-weight: 800;
             font-size: 20px;
             display: flex;
             align-self: flex-end;
             position: relative;
             bottom: 50px;
-            left: -30px;   
+            left: -50px;   
         }
         h4{
             position: relative;
             left: 20px;
             font-size: 20px; 
+            
         }
         p{
             position: relative;
@@ -36,11 +43,10 @@ $grey:#f1f1f1;
                  ;
          
         :hover{
-            position: absolute;
-            width: 10%;
-            height: 80px;
             
-            animation: check 2s reverse linear forwards ;
+                
+            
+            animation: slide 2s  linear forwards ;
             
         }
                   
@@ -64,7 +70,28 @@ $grey:#f1f1f1;
                
             }
         }
+
+        @keyframes slide{
+            0%{
+                background-color: $mint;
+                width: 5%;
+                transform: translateX(0%);
+            }
+            50%{
+                background-color:$mint;
+                width: 15%;
+                transform: translateX(10%); 
+            }
+            100%{
+                background-color:$mint;
+                width: 20%;
+                transform: translateX(20%);
+            }
+        }
     }
+
+
+ 
     
 body{
     background-color: $grey;
@@ -145,29 +172,34 @@ body{
     }
 
 .section1{
-        @include tab;
+
+    
+     
+
         opacity:0; 
-        animation-delay: 0.1s;
+        animation-delay  : 0.1s;
+    
         .fa-check-circle{
+            
             position: absolute;
             color:white;
             display: flex;
             align-items: center;
-            justify-content: center;
-            background-color: $mint;
-            width: 80px;
+            justify-items: center;
+            
+            width: 70px;
             height: 80px;
             border-radius: 0px 25px 25px 0px;
-            right: 2%;
-            :hover{
-                position: absolute;
-                width: 50px;
-                height: 80px;
-                
-                 
-                
-            }
+            right:0%  
         }
+
+
+       
+        
+        @include tab
+        
+
+        
         
     }
 
@@ -175,7 +207,7 @@ body{
     @include tab;
     opacity:0;
     animation-delay: 0.4s;
-    
+   
 }
 
 .section3{
@@ -217,11 +249,11 @@ body{
         transition: transform 450ms;
                 &:hover {
                 transform: scale(1.13);
-                background-color: #c96aae
-                
-            }
-            
-        }
+                background-color: #c96aae;
+                }
+    
+}
+  
 
         
     

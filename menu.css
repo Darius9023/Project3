@@ -100,8 +100,11 @@ body {
 }
 
 .section1 {
-  background-color: #ffffff;
-  width: 100%;
+  opacity: 0;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  background-color: #ffff;
+  width: 425px;
   height: 80px;
   border-radius: 25px;
   display: -webkit-box;
@@ -115,9 +118,27 @@ body {
   margin-bottom: 20px;
   -webkit-animation: pop-out 2s linear forwards;
           animation: pop-out 2s linear forwards;
-  opacity: 0;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+}
+
+.section1 .fa-check-circle {
+  position: absolute;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 70px;
+  height: 80px;
+  border-radius: 0px 25px 25px 0px;
+  right: 0%;
+}
+
+.section1 :hover {
+  -webkit-animation: slide 2s linear forwards;
+          animation: slide 2s linear forwards;
 }
 
 .section1 .price {
@@ -130,7 +151,7 @@ body {
       align-self: flex-end;
   position: relative;
   bottom: 50px;
-  left: -30px;
+  left: -50px;
 }
 
 .section1 h4 {
@@ -146,10 +167,8 @@ body {
 }
 
 .section1 :hover {
-  position: absolute;
-  width: 10%;
-  height: 80px;
-  animation: check 2s reverse linear forwards;
+  -webkit-animation: slide 2s  linear forwards;
+          animation: slide 2s  linear forwards;
 }
 
 @-webkit-keyframes pop-out {
@@ -206,34 +225,51 @@ body {
   }
 }
 
-.section1 .fa-check-circle {
-  position: absolute;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #99e2d0;
-  width: 80px;
-  height: 80px;
-  border-radius: 0px 25px 25px 0px;
-  right: 2%;
+@-webkit-keyframes slide {
+  0% {
+    background-color: #99e2d0;
+    width: 5%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    background-color: #99e2d0;
+    width: 15%;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    background-color: #99e2d0;
+    width: 20%;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
 }
 
-.section1 .fa-check-circle :hover {
-  position: absolute;
-  width: 50px;
-  height: 80px;
+@keyframes slide {
+  0% {
+    background-color: #99e2d0;
+    width: 5%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    background-color: #99e2d0;
+    width: 15%;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    background-color: #99e2d0;
+    width: 20%;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
 }
 
 .section2 {
-  background-color: #ffffff;
-  width: 100%;
+  background-color: #ffff;
+  width: 425px;
   height: 80px;
   border-radius: 25px;
   display: -webkit-box;
@@ -252,6 +288,11 @@ body {
           animation-delay: 0.4s;
 }
 
+.section2 :hover {
+  -webkit-animation: slide 2s linear forwards;
+          animation: slide 2s linear forwards;
+}
+
 .section2 .price {
   font-weight: 800;
   font-size: 20px;
@@ -262,7 +303,7 @@ body {
       align-self: flex-end;
   position: relative;
   bottom: 50px;
-  left: -30px;
+  left: -50px;
 }
 
 .section2 h4 {
@@ -278,10 +319,8 @@ body {
 }
 
 .section2 :hover {
-  position: absolute;
-  width: 10%;
-  height: 80px;
-  animation: check 2s reverse linear forwards;
+  -webkit-animation: slide 2s  linear forwards;
+          animation: slide 2s  linear forwards;
 }
 
 @keyframes pop-out {
@@ -311,9 +350,30 @@ body {
   }
 }
 
+@keyframes slide {
+  0% {
+    background-color: #99e2d0;
+    width: 5%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    background-color: #99e2d0;
+    width: 15%;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    background-color: #99e2d0;
+    width: 20%;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
+}
+
 .section3 {
-  background-color: #ffffff;
-  width: 100%;
+  background-color: #ffff;
+  width: 425px;
   height: 80px;
   border-radius: 25px;
   display: -webkit-box;
@@ -332,6 +392,11 @@ body {
           animation-delay: 0.8s;
 }
 
+.section3 :hover {
+  -webkit-animation: slide 2s linear forwards;
+          animation: slide 2s linear forwards;
+}
+
 .section3 .price {
   font-weight: 800;
   font-size: 20px;
@@ -342,7 +407,7 @@ body {
       align-self: flex-end;
   position: relative;
   bottom: 50px;
-  left: -30px;
+  left: -50px;
 }
 
 .section3 h4 {
@@ -358,10 +423,8 @@ body {
 }
 
 .section3 :hover {
-  position: absolute;
-  width: 10%;
-  height: 80px;
-  animation: check 2s reverse linear forwards;
+  -webkit-animation: slide 2s  linear forwards;
+          animation: slide 2s  linear forwards;
 }
 
 @keyframes pop-out {
@@ -391,9 +454,30 @@ body {
   }
 }
 
+@keyframes slide {
+  0% {
+    background-color: #99e2d0;
+    width: 5%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    background-color: #99e2d0;
+    width: 15%;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    background-color: #99e2d0;
+    width: 20%;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
+}
+
 .section4 {
-  background-color: #ffffff;
-  width: 100%;
+  background-color: #ffff;
+  width: 425px;
   height: 80px;
   border-radius: 25px;
   display: -webkit-box;
@@ -412,6 +496,11 @@ body {
           animation-delay: 1.2s;
 }
 
+.section4 :hover {
+  -webkit-animation: slide 2s linear forwards;
+          animation: slide 2s linear forwards;
+}
+
 .section4 .price {
   font-weight: 800;
   font-size: 20px;
@@ -422,7 +511,7 @@ body {
       align-self: flex-end;
   position: relative;
   bottom: 50px;
-  left: -30px;
+  left: -50px;
 }
 
 .section4 h4 {
@@ -438,10 +527,8 @@ body {
 }
 
 .section4 :hover {
-  position: absolute;
-  width: 10%;
-  height: 80px;
-  animation: check 2s reverse linear forwards;
+  -webkit-animation: slide 2s  linear forwards;
+          animation: slide 2s  linear forwards;
 }
 
 @keyframes pop-out {
@@ -468,6 +555,27 @@ body {
     width: 10%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    background-color: #99e2d0;
+    width: 5%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    background-color: #99e2d0;
+    width: 15%;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    background-color: #99e2d0;
+    width: 20%;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
   }
 }
 
