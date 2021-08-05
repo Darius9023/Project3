@@ -34,25 +34,23 @@ $grey:#f1f1f1;
         cursor: pointer;
         font-size: 25px;
         color: grey;
-        .fas .fa-heart{
+        &:hover .fa-heart{
             display: none;
             visibility: hidden;
             background-image:linear-gradient(#ff79da, #9356dc);
         }
-        &:hover { 
-            width: 30px;
-            height: 30px;
-             background-image:linear-gradient(#ff79da, #9356dc);
+        
              
             
             
-            }
+            
     }
     img{
         width: 100%;
         height: 200px;
         border-radius: 20px 20px 00px 00px;   
     }
+
     margin-bottom: 30px;
     line-height: 5px;
     box-shadow: 5px 5px 5px rgb(155, 152, 152);
@@ -62,7 +60,7 @@ $grey:#f1f1f1;
 }
     
 @mixin  section {
-    width: 95%;
+    width: 96%;
     height: 70px;
     background-color:#f1f1f1
     ;
@@ -174,9 +172,11 @@ h2{
 }
 
 .header1 {
-    border-top: 3px outset  rgb(184, 181, 181);
+    outline: 2px solid  grey;
     
-    background-color: $grey;
+    
+    
+    background-color:$grey;
     width: 100%;
     height: 3rem;
     display: flex;

@@ -6,18 +6,13 @@ $grey:#f1f1f1;
 
 @mixin tab {
     background-color:#ffff;
-        width: 425px;
+        width: 96%;
         height: 80px;
         border-radius: 25px;
         display: flex;
         flex-direction: column;
         line-height:0.01px; 
         margin-bottom: 20px;
-        :hover{
-            
-            animation: slide 2s linear forwards ;    
-        }
-        
         .price{
             
             font-weight: 800;
@@ -42,13 +37,7 @@ $grey:#f1f1f1;
         animation: pop-out 2s linear forwards,
                  ;
          
-        :hover{
-            
-                
-            
-            animation: slide 2s  linear forwards ;
-            
-        }
+        
                   
         @keyframes pop-out {
             from{ opacity: 0;}
@@ -57,15 +46,15 @@ $grey:#f1f1f1;
         
         @keyframes check{
             0%{
-                width: 80%;
+                width: 0%;
                 transform: rotate(0);
             }
             50%{
-                width: 60%;
+                width: 10%;
                 transform: rotate(180deg);
             }
             100%{
-            width: 10%;
+            width: 20%;
             transform: rotate(360deg);
                
             }
@@ -73,24 +62,45 @@ $grey:#f1f1f1;
 
         @keyframes slide{
             0%{
-                background-color: $mint;
-                width: 5%;
-                transform: translateX(0%);
+                
+                transform: translateX(90%);
+                width: 0px;
+                height: 80px;
+                left: 100%;
+                border-radius: 0px 25px 25px 0px;
+                p{
+                    left: 10px;
+                }
             }
             50%{
-                background-color:$mint;
-                width: 15%;
-                transform: translateX(10%); 
+               
+                transform: translateX(80%); 
+                width: 50px;
+                height: 80px;
+                left: 80%;
+                border-radius: 0px 25px 25px 0px;
+                p{
+                    left: 10px;
+                }
             }
             100%{
-                background-color:$mint;
-                width: 20%;
-                transform: translateX(20%);
+                
+                transform: translateX(70%);
+                width: 80px;
+                height: 80px;
+                left: 60%;
+                border-radius: 0px 25px 25px 0px;
+                p{
+                    left: 10px;
+                }
             }
         }
     }
 
-
+@keyframes sectionshrink {
+    from{width:100% ;}
+    to{width: 80%;}
+}
  
     
 body{
@@ -172,30 +182,29 @@ body{
     }
 
 .section1{
-
-    
-     
-
-        opacity:0; 
+    cursor: pointer;
+    opacity:1; 
         animation-delay  : 0.1s;
-    
-        .fa-check-circle{
-            
-            position: absolute;
-            color:white;
-            display: flex;
-            align-items: center;
-            justify-items: center;
-            
-            width: 70px;
-            height: 80px;
-            border-radius: 0px 25px 25px 0px;
-            right:0%  
-        }
-
-
-       
+     &:hover{
         
+        .fa-check-circle{
+            position: absolute; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $mint;
+            color: white;
+            width: 18%;
+            transition: 3s ease ;
+            animation: slide linear 1s forwards,
+                       ;    
+        } 
+        
+        animation: sectionshrink linear 1s forwards;
+     }
+
+                
         @include tab
         
 
