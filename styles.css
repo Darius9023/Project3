@@ -19,8 +19,8 @@ h2 {
 }
 
 .header1 {
-  outline: 2px solid  grey;
-  background-color: #f1f1f1;
+  border-top: 2px solid #bdbdbd;
+  background-color: #d4d4d4;
   width: 100%;
   height: 3rem;
   display: -webkit-box;
@@ -218,23 +218,27 @@ h2 {
           transform: scale(1.13);
 }
 
-.first .fa-heart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.first .far.fa-hover-hidden {
+  color: gray;
   position: relative;
   left: 80%;
   bottom: 40px;
-  cursor: pointer;
-  font-size: 25px;
-  color: grey;
 }
 
-.first .fa-heart:hover .fa-heart {
+.first .fas.fa-hover-show {
+  color: #ff79da;
+  position: relative;
+  left: 80%;
+  bottom: 40px;
+}
+
+.first * > .fas.fa-hover-show,
+.first *:hover > .far.fa-hover-hidden {
   display: none;
-  visibility: hidden;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(#ff79da, #9356dc);
+}
+
+.first *:hover > .fas.fa-hover-show {
+  display: block;
 }
 
 .first img {

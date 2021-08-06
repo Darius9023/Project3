@@ -26,25 +26,29 @@ $grey:#f1f1f1;
             &:hover {
             transform: scale(1.13);
             }
-    .fa-heart{
-        display: flex;
-        position: relative;
-        left: 80%;
-        bottom: 40px;
-        cursor: pointer;
-        font-size: 25px;
-        color: grey;
-        &:hover .fa-heart{
-            display: none;
-            visibility: hidden;
-            background-image:linear-gradient(#ff79da, #9356dc);
-        }
-        
-             
-            
-            
-            
-    }
+            .far.fa-hover-hidden {
+                color: gray;
+                position: relative;
+                left: 80%;
+                bottom: 40px;
+                  
+              }
+              .fas.fa-hover-show {
+                color: $pink;
+                position: relative;
+                left: 80%;
+                bottom: 40px;
+                
+              }
+              
+              * > .fas.fa-hover-show,
+              *:hover > .far.fa-hover-hidden {
+                  display: none;
+              }
+              
+              *:hover > .fas.fa-hover-show {
+                  display: block;
+              }
     img{
         width: 100%;
         height: 200px;
@@ -172,11 +176,11 @@ h2{
 }
 
 .header1 {
-    outline: 2px solid  grey;
+    border-top: 2px solid  rgb(189, 189, 189);
     
     
     
-    background-color:$grey;
+    background-color:rgb(212, 212, 212);
     width: 100%;
     height: 3rem;
     display: flex;
