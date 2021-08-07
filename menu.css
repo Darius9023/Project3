@@ -1,18 +1,90 @@
-@-webkit-keyframes sectionshrink {
+@-webkit-keyframes pop-out {
   from {
-    width: 100%;
+    opacity: 0;
   }
   to {
-    width: 80%;
+    opacity: 1;
   }
 }
 
-@keyframes sectionshrink {
+@keyframes pop-out {
   from {
-    width: 100%;
+    opacity: 0;
   }
   to {
-    width: 80%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes check {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes check {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@-webkit-keyframes section {
+  from {
+    width: 0px;
+    height: 80px;
+    left: 400px;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #99e2d0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    width: 80px;
+    height: 80px;
+    left: 321px;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #99e2d0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes section {
+  from {
+    width: 0px;
+    height: 80px;
+    left: 400px;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #99e2d0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    width: 80px;
+    height: 80px;
+    left: 321px;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #99e2d0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -120,14 +192,16 @@ body {
 .section1 {
   cursor: pointer;
   opacity: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
   background-color: #ffff;
   width: 96%;
   height: 80px;
   border-radius: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -137,31 +211,6 @@ body {
   margin-bottom: 20px;
   -webkit-animation: pop-out 2s linear forwards;
           animation: pop-out 2s linear forwards;
-}
-
-.section1:hover {
-  -webkit-animation: sectionshrink linear 1s forwards;
-          animation: sectionshrink linear 1s forwards;
-}
-
-.section1:hover .fa-check-circle {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #99e2d0;
-  color: white;
-  width: 18%;
-  -webkit-transition: 3s ease;
-  transition: 3s ease;
-  -webkit-animation: slide linear 1s forwards;
-          animation: slide linear 1s forwards;
 }
 
 .section1 .price {
@@ -189,130 +238,45 @@ body {
   bottom: 10px;
 }
 
-@-webkit-keyframes pop-out {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.item__check {
+  background-color: #99e2d0;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  right: -20%;
+  -webkit-animation: section ease 1s forwards;
+          animation: section ease 1s forwards;
+  display: none;
 }
 
-@keyframes pop-out {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.item__check i {
+  font-size: 40px;
+  color: white;
+  -webkit-animation: check 1s ease forwards;
+          animation: check 1s ease forwards;
 }
 
-@-webkit-keyframes check {
-  0% {
-    width: 0%;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  50% {
-    width: 10%;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  100% {
-    width: 20%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.section1:hover .item__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@keyframes check {
-  0% {
-    width: 0%;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  50% {
-    width: 10%;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  100% {
-    width: 20%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.section1:hover .price {
+  margin-right: 4rem;
 }
 
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
-    width: 0px;
-    height: 80px;
-    left: 100%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  50% {
-    -webkit-transform: translateX(80%);
-            transform: translateX(80%);
-    width: 50px;
-    height: 80px;
-    left: 80%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  100% {
-    -webkit-transform: translateX(70%);
-            transform: translateX(70%);
-    width: 80px;
-    height: 80px;
-    left: 60%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-}
-
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
-    width: 0px;
-    height: 80px;
-    left: 100%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  50% {
-    -webkit-transform: translateX(80%);
-            transform: translateX(80%);
-    width: 50px;
-    height: 80px;
-    left: 80%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  100% {
-    -webkit-transform: translateX(70%);
-            transform: translateX(70%);
-    width: 80px;
-    height: 80px;
-    left: 60%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
+.section1:hover .text.p {
+  margin-right: 4rem;
 }
 
 .section2 {
@@ -361,67 +325,45 @@ body {
   bottom: 10px;
 }
 
-@keyframes pop-out {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.item__check {
+  background-color: #99e2d0;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  right: -20%;
+  -webkit-animation: section ease 1s forwards;
+          animation: section ease 1s forwards;
+  display: none;
 }
 
-@keyframes check {
-  0% {
-    width: 0%;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  50% {
-    width: 10%;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  100% {
-    width: 20%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.item__check i {
+  font-size: 40px;
+  color: white;
+  -webkit-animation: check 1s ease forwards;
+          animation: check 1s ease forwards;
 }
 
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
-    width: 0px;
-    height: 80px;
-    left: 100%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  50% {
-    -webkit-transform: translateX(80%);
-            transform: translateX(80%);
-    width: 50px;
-    height: 80px;
-    left: 80%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  100% {
-    -webkit-transform: translateX(70%);
-            transform: translateX(70%);
-    width: 80px;
-    height: 80px;
-    left: 60%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
+.section2:hover .item__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section2:hover .price {
+  margin-right: 4rem;
+}
+
+.section2:hover .text.p {
+  margin-right: 4rem;
 }
 
 .section3 {
@@ -470,67 +412,45 @@ body {
   bottom: 10px;
 }
 
-@keyframes pop-out {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.item__check {
+  background-color: #99e2d0;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  right: -20%;
+  -webkit-animation: section ease 1s forwards;
+          animation: section ease 1s forwards;
+  display: none;
 }
 
-@keyframes check {
-  0% {
-    width: 0%;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  50% {
-    width: 10%;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  100% {
-    width: 20%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.item__check i {
+  font-size: 40px;
+  color: white;
+  -webkit-animation: check 1s ease forwards;
+          animation: check 1s ease forwards;
 }
 
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
-    width: 0px;
-    height: 80px;
-    left: 100%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  50% {
-    -webkit-transform: translateX(80%);
-            transform: translateX(80%);
-    width: 50px;
-    height: 80px;
-    left: 80%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  100% {
-    -webkit-transform: translateX(70%);
-            transform: translateX(70%);
-    width: 80px;
-    height: 80px;
-    left: 60%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
+.section3:hover .item__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section3:hover .price {
+  margin-right: 4rem;
+}
+
+.section3:hover .text.p {
+  margin-right: 4rem;
 }
 
 .section4 {
@@ -579,67 +499,45 @@ body {
   bottom: 10px;
 }
 
-@keyframes pop-out {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.item__check {
+  background-color: #99e2d0;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  right: -20%;
+  -webkit-animation: section ease 1s forwards;
+          animation: section ease 1s forwards;
+  display: none;
 }
 
-@keyframes check {
-  0% {
-    width: 0%;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  50% {
-    width: 10%;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  100% {
-    width: 20%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.item__check i {
+  font-size: 40px;
+  color: white;
+  -webkit-animation: check 1s ease forwards;
+          animation: check 1s ease forwards;
 }
 
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
-    width: 0px;
-    height: 80px;
-    left: 100%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  50% {
-    -webkit-transform: translateX(80%);
-            transform: translateX(80%);
-    width: 50px;
-    height: 80px;
-    left: 80%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
-  100% {
-    -webkit-transform: translateX(70%);
-            transform: translateX(70%);
-    width: 80px;
-    height: 80px;
-    left: 60%;
-    border-radius: 0px 25px 25px 0px;
-    p {
-      left: 10px;
-    }
-  }
+.section4:hover .item__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section4:hover .price {
+  margin-right: 4rem;
+}
+
+.section4:hover .text.p {
+  margin-right: 4rem;
 }
 
 .button {
