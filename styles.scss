@@ -11,6 +11,15 @@ $pink:#ff79da;
 $mint:#99e2d0;
 $grey:#f1f1f1;
 
+@keyframes bar {
+    from{
+        transform: scale(2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
 @mixin Restauran {
     border-radius: 20px 20px;
     padding-bottom: 1px;
@@ -26,6 +35,7 @@ $grey:#f1f1f1;
     overflow: hidden;
     position: relative;
     transition: transform 450ms;
+    animation: bar 2s ease forwards;
             &:hover {
             transform: scale(1.13);
             }

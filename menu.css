@@ -272,11 +272,12 @@ body {
 }
 
 .section1:hover .price {
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
-.section1:hover .text.p {
-  margin-right: 4rem;
+.section1:hover .p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .section2 {
@@ -359,11 +360,12 @@ body {
 }
 
 .section2:hover .price {
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
-.section2:hover .text.p {
-  margin-right: 4rem;
+.section2:hover .p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .section3 {
@@ -446,11 +448,12 @@ body {
 }
 
 .section3:hover .price {
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
-.section3:hover .text.p {
-  margin-right: 4rem;
+.section3:hover .p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .section4 {
@@ -533,11 +536,12 @@ body {
 }
 
 .section4:hover .price {
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
-.section4:hover .text.p {
-  margin-right: 4rem;
+.section4:hover .p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .button {
