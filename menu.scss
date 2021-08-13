@@ -1,8 +1,10 @@
-$purple:#9356dc ;
+
+title{
+$purple:#9356dc;
 $pink:#ff79da;
 $mint:#99e2d0;
 $grey:#f1f1f1;
-
+}
 
 @mixin tab {
     background-color:#ffff;
@@ -219,7 +221,8 @@ body{
     
        }
 
-       
+    
+
 .section2{
     @include tab;
     opacity:0;
@@ -237,9 +240,10 @@ body{
       .price{
         margin-right: 2rem;
       }
-      .p{
+      p{
+          white-space: nowrap;
         text-overflow: ellipsis;
-        overflow: hidden;
+        
       }
     
        }

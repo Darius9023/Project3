@@ -363,9 +363,9 @@ body {
   margin-right: 2rem;
 }
 
-.section2:hover .p {
+.section2:hover p {
+  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .section3 {

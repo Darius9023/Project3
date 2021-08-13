@@ -1,16 +1,16 @@
-.body{
-    
-    font-family: 'Roboto', sans-serif;
+ p{
+     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-
-    
 }
+    
 
-$purple:#9356dc ;
+
+
+$purple:#9356dc;
 $pink:#ff79da;
 $mint:#99e2d0;
 $grey:#f1f1f1;
-
+ 
 @keyframes bar {
     from{
         transform: scale(2);
@@ -115,8 +115,9 @@ $grey:#f1f1f1;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-        right: 120px;
+        position: absolute;
+        left: -10px;
+        
         p{
             color: white;
         }
@@ -213,7 +214,7 @@ h2{
 }
 
 .header2 {
-    background-color:$grey;
+    background-color: $grey;
     height: 250px;
     margin-top: -10px;
     margin-bottom: 40px;
@@ -230,7 +231,7 @@ h2{
         border-radius: 30px;
         border: $purple;
         font-size: 15px;
-        box-shadow: inset 0 6px 5px -3px rgb;
+        box-shadow: 3px 3px 3px 3px;
         cursor: pointer;
     overflow: hidden;
     padding: 1.85rem 3rem;
@@ -251,19 +252,21 @@ h2{
 
 .works{
     @include section;
-    
+   
 }
 
 .first{
     @include Restauran
+
+
 }
 
 .new{
     width: 55px;
     height: 25px;
     background-color: aquamarine;
-    position: absolute;
-    left: 300px;
+    position:absolute;
+    right: 20px;
     top: 15px;
     display: flex;
     justify-content: center;
@@ -285,4 +288,33 @@ h2{
 
 .footer{
     @include Footer;
+}
+
+
+@media (min-width: 400px)
+{
+   .works{
+       width: 400px;
+       margin: 15px auto;
+       .header2{
+           h2{
+               margin:auto;
+           }
+       }
+      
+   }
+
+   .first{
+       width: 430px;
+   }
+
+   .circle{
+     float: left;
+      display: flex;
+     
+   }
+
+   
+   
+
 }

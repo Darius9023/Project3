@@ -1,4 +1,4 @@
-.body {
+p {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
@@ -100,8 +100,8 @@ h2 {
   border-radius: 30px;
   border: #9356dc;
   font-size: 15px;
-  -webkit-box-shadow: inset 0 6px 5px -3px rgb;
-          box-shadow: inset 0 6px 5px -3px rgb;
+  -webkit-box-shadow: 3px 3px 3px 3px;
+          box-shadow: 3px 3px 3px 3px;
   cursor: pointer;
   overflow: hidden;
   padding: 1.85rem 3rem;
@@ -186,8 +186,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  right: 120px;
+  position: absolute;
+  left: -10px;
 }
 
 .works .circle p {
@@ -281,7 +281,7 @@ h2 {
   height: 25px;
   background-color: aquamarine;
   position: absolute;
-  left: 300px;
+  right: 20px;
   top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,5 +342,24 @@ h2 {
 .footer .log {
   font-family: 'Shrikhand', cursive;
   font-size: 25px;
+}
+
+@media (min-width: 400px) {
+  .works {
+    width: 400px;
+    margin: 15px auto;
+  }
+  .works .header2 h2 {
+    margin: auto;
+  }
+  .first {
+    width: 430px;
+  }
+  .circle {
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
