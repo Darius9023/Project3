@@ -226,12 +226,12 @@ h2 {
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  -webkit-transition: -webkit-transform 450ms;
-  transition: -webkit-transform 450ms;
-  transition: transform 450ms;
-  transition: transform 450ms, -webkit-transform 450ms;
-  -webkit-animation: bar 2s ease forwards;
-          animation: bar 2s ease forwards;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-animation: bar 3s ease forwards;
+          animation: bar 3s ease forwards;
   margin-bottom: 30px;
   line-height: 5px;
   -webkit-box-shadow: 5px 5px 5px #9b9898;
@@ -239,8 +239,8 @@ h2 {
 }
 
 .first:hover {
-  -webkit-transform: scale(1.13);
-          transform: scale(1.13);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .first .far.fa-hover-hidden {

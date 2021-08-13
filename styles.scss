@@ -34,10 +34,10 @@ $grey:#f1f1f1;
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    transition: transform 450ms;
-    animation: bar 2s ease forwards;
+    transition: transform 500ms;
+    animation: bar 3s ease forwards;
             &:hover {
-            transform: scale(1.13);
+            transform: scale(1.15);
             }
             .far.fa-hover-hidden {
                 color: gray;
